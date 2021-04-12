@@ -8,15 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="#">link</a>
+    <!-- <a href="#">link</a>
     <h3 id="header">JQuery Dersleri</h3>
     <ul id="liste">
         <li class="item">JQuery Reference</li>
         <li>Selectors <a href="#">link</a></li>
         <li class="item">JQuery Plugins</li>
+    </ul> -->
+
+    <h1>JQuery Helper Methods</h1>
+
+    <ul>
+        <li>JQuery Selectors</li>
+        <li>JQuery Methods</li>
+        <li>Jquery Animations</li>
+
     </ul>
 
+    <!-- <input type="text" placeholder="FullName" value="JQuery Val Fonksiyonu"> -->
+    <input id="ad" type="text" placeholder="Adiniz">
+    <input id="soyad" type="text" placeholder="Soyadiniz">
+    <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
+    
+    
     <script>
+        function adsoyad()
+        {
+            var ad=$('#ad').val();
+            var soyad=$('#soyad').val();
+
+            console.log('adiniz ve soyadiniz :' + ad +' '+soyad);
+        }
+        //console.log($('input').val()); 
+        //$('input').val('ssss');  
+        
+        
+        //console.log($('h1').text());
+        //console.log($('ul').text());
+        //console.log($('ul li').text());
+
         //console.log($("#liste"));
         //console.log($("h3"));
         //console.log($("ul"));
@@ -25,17 +55,24 @@
         //console.log($("a"));
         //console.log($("ul li a"));
         //document.getElementById('header').style.color='red';
-        $('#header').css('color','blue');
-        $('#liste a').css('text-decoration','none');
-        $('a').css('text-decoration','none');
+        // $('#header').css('color','blue');
+        // $('#liste a').css('text-decoration','none');
+        // $('a').css('text-decoration','none');
 
-        var styles ={
-            color:'yellow',
-            fontSize:'20px',
-            border:'1px solid red'
-        }
+        // var styles ={
+        //     color:'yellow',
+        //     fontSize:'20px',
+        //     border:'1px solid red',
+        //     borderRadius:'5px',
+        //     listStyle:'none'
+        // }
 
-        $('ul li').css(styles);
+        // $('ul li').css(styles);
+        //$('h1').text('Javascript');
+        
+
+
+
     </script>
     
 </body>
