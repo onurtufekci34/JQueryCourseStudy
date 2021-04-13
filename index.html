@@ -8,11 +8,11 @@
     <title>Jquery</title>
     <style>
 
-        .paragrafrenklendir
+        /* .paragrafrenklendir
         {
             color: red;
             font-size: 25px;
-        }
+        } */
 
 
         /* .highlight
@@ -23,13 +23,30 @@
 </head>
 <body>
 
-        <p id="p1">Web Developer Egitimi</p>
+    <form>
+
+        <p>
+            Ad: <input class="control" type="text">
+        </p>
+
+        <p>
+            Hobiler: <select class="control">
+                <option value="spor" selected="selected">Spor Yapmak</option>
+                <option value="sinema">Sinema</option>
+            </select>
+
+        </p>
+
+
+    </form>
+
+        <!-- <p id="p1">Web Developer Egitimi</p>
 
         <p id="p2">Web Developer Egitimi</p>
 
         <p class="paragraf">Web Developer Egitimi</p>
 
-        <p class="paragraf">Web Developer Egitimi</p>
+        <p class="paragraf">Web Developer Egitimi</p> -->
 
 
     <!-- <a href="#">link</a>
@@ -56,22 +73,39 @@
     
     
     <script>
-        $(document).ready(function(){
 
-            $('.paragraf').click(function(){
+            $(document).ready(function(){
 
-                $(this).addClass('paragrafrenklendir')
+                $('.control').change(function(){
+
+                    console.log($(this).val());
+                    console.log('change event');
+
+                });
+
+
+
 
             });
 
 
-            // $('#p1').click(function(){
-            //     alert('p1 click event');
-            // });
+
+        // $(document).ready(function(){
+
+        //     $('.paragraf').dblclick(function(){
+
+        //         $(this).addClass('paragrafrenklendir')
+
+        //     });
 
 
-            //console.log('document ready')
-        });
+        //     // $('#p1').click(function(){
+        //     //     alert('p1 click event');
+        //     // });
+
+
+        //     //console.log('document ready')
+        // });
         // $(function(){
         //     console.log('document ready')
         // });
