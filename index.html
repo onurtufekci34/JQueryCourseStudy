@@ -23,7 +23,16 @@
 </head>
 <body>
 
-    <form>
+    <p>Sifirdan Web Developer Egitimi</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+
+
+
+    <!-- <form>
 
         <p>
             Ad: <input class="control" type="text">
@@ -38,7 +47,7 @@
         </p>
 
 
-    </form>
+    </form> -->
 
         <!-- <p id="p1">Web Developer Egitimi</p>
 
@@ -74,19 +83,46 @@
     
     <script>
 
-            $(document).ready(function(){
+        $(document).ready(function(){
 
-                $('.control').change(function(){
+            $('#hide').click(function(){
 
-                    console.log($(this).val());
-                    console.log('change event');
-
-                });
-
-
-
+                $('p').hide(3000);
 
             });
+
+            $('#show').click(function(){
+
+                $('p').show('fast',function(){
+                    alert('paragraf gosterildi!');
+                });
+
+            });
+
+            $('#toggle').click(function(){
+
+                $('p').toggle('slow');
+
+            });
+
+
+
+        });
+
+
+            // $(document).ready(function(){
+
+            //     $('.control').change(function(){
+
+            //         console.log($(this).val());
+            //         console.log('change event');
+
+            //     });
+
+
+
+
+            // });
 
 
 
