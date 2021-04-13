@@ -8,6 +8,17 @@
     <title>Jquery</title>
     <style>
 
+        #box
+        {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+
         /* .paragrafrenklendir
         {
             color: red;
@@ -23,11 +34,18 @@
 </head>
 <body>
 
-    <p>Sifirdan Web Developer Egitimi</p>
+    <button id="animate">Animate</button>
+
+    <div id="box">
+        MERHABA
+    </div>
+
+
+    <!-- <p>Sifirdan Web Developer Egitimi</p>
 
     <button id="hide">Hide</button>
     <button id="show">Show</button>
-    <button id="toggle">Toggle</button>
+    <button id="toggle">Toggle</button> -->
 
 
 
@@ -79,35 +97,57 @@
     <!-- <input id="ad" type="text" placeholder="Adiniz">
     <input id="soyad" type="text" placeholder="Soyadiniz">
     <button id="btnKaydet" onclick="adsoyad();">Kaydet</button> -->
-    
-    
+
+
     <script>
 
         $(document).ready(function(){
 
-            $('#hide').click(function(){
+            $('#animate').click(function(){
 
-                $('p').hide(3000);
+                var box=$('#box');
 
-            });
+                box.animate({
+                 left:'200px',
+                 width:'250px',
+                 height:'250px'
+            },3000,
+            function(){
+                 //alert('animasyon bitti')
+            })
 
-            $('#show').click(function(){
-
-                $('p').show('fast',function(){
-                    alert('paragraf gosterildi!');
-                });
-
-            });
-
-            $('#toggle').click(function(){
-
-                $('p').toggle('slow');
-
+            box.animate({fontSize:'50px'},3000)
             });
 
 
 
         });
+
+        // $(document).ready(function(){
+
+        //     $('#hide').click(function(){
+
+        //         $('p').hide(3000);
+
+        //     });
+
+        //     $('#show').click(function(){
+
+        //         $('p').show('fast',function(){
+        //             alert('paragraf gosterildi!');
+        //         });
+
+        //     });
+
+        //     $('#toggle').click(function(){
+
+        //         $('p').toggle('slow');
+
+        //     });
+
+
+
+        //
 
 
             // $(document).ready(function(){
@@ -157,10 +197,10 @@
 
         //     $('#ad').addClass('highlight');
         // }
-        //console.log($('input').val()); 
-        //$('input').val('ssss');  
-        
-        
+        //console.log($('input').val());
+        //$('input').val('ssss');
+
+
         //console.log($('h1').text());
         //console.log($('ul').text());
         //console.log($('ul li').text());
@@ -187,11 +227,11 @@
 
         // $('ul li').css(styles);
         //$('h1').text('Javascript');
-        
+
 
 
 
     </script>
-    
+
 </body>
 </html>
