@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Jquery</title>
+    <style>
+
+        .paragrafrenklendir
+        {
+            color: red;
+            font-size: 25px;
+        }
+
+
+        /* .highlight
+        {
+            background-color: yellow;
+        } */
+    </style>
 </head>
 <body>
+
+        <p id="p1">Web Developer Egitimi</p>
+
+        <p id="p2">Web Developer Egitimi</p>
+
+        <p class="paragraf">Web Developer Egitimi</p>
+
+        <p class="paragraf">Web Developer Egitimi</p>
+
+
     <!-- <a href="#">link</a>
     <h3 id="header">JQuery Dersleri</h3>
     <ul id="liste">
@@ -16,29 +40,53 @@
         <li class="item">JQuery Plugins</li>
     </ul> -->
 
-    <h1>JQuery Helper Methods</h1>
+    <!-- <h1>JQuery Helper Methods</h1>
 
     <ul>
         <li>JQuery Selectors</li>
         <li>JQuery Methods</li>
         <li>Jquery Animations</li>
 
-    </ul>
+    </ul> -->
 
     <!-- <input type="text" placeholder="FullName" value="JQuery Val Fonksiyonu"> -->
-    <input id="ad" type="text" placeholder="Adiniz">
+    <!-- <input id="ad" type="text" placeholder="Adiniz">
     <input id="soyad" type="text" placeholder="Soyadiniz">
-    <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
+    <button id="btnKaydet" onclick="adsoyad();">Kaydet</button> -->
     
     
     <script>
-        function adsoyad()
-        {
-            var ad=$('#ad').val();
-            var soyad=$('#soyad').val();
+        $(document).ready(function(){
 
-            console.log('adiniz ve soyadiniz :' + ad +' '+soyad);
-        }
+            $('.paragraf').click(function(){
+
+                $(this).addClass('paragrafrenklendir')
+
+            });
+
+
+            // $('#p1').click(function(){
+            //     alert('p1 click event');
+            // });
+
+
+            //console.log('document ready')
+        });
+        // $(function(){
+        //     console.log('document ready')
+        // });
+
+
+
+        // function adsoyad()
+        // {
+        //     var ad=$('#ad').val();
+        //     var soyad=$('#soyad').val();
+
+        //     console.log('adiniz ve soyadiniz :' + ad +' '+soyad);
+
+        //     $('#ad').addClass('highlight');
+        // }
         //console.log($('input').val()); 
         //$('input').val('ssss');  
         
